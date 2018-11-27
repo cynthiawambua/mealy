@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+/* custom class I created */
+
+.mealy-bg{
+    background-color: coral; 
+    color: white;
+}
+.mealy-brand {
+    color: coral;
+}
+
+/* BORDER STYLES */
+.mealy-border {
+    border:  5px coral solid;
+}
+.mealy-border-l {
+    border-left: 5px coral solid;
+}
+.mealy-border-t {
+    border-top: 5px coral solid;
+}
+.mealy-border-r {
+    border-right: 5px coral solid;
+}
+.mealy-border-b {
+    border-bottom: 5px coral solid;
+}
+
+/* Buttons */
+.btn-circle {
+    width: 100px;
+    height: 100px;
+    line-height: 40px; /* adjust line height to align vertically*/
+    padding:0;
+
+    border: 3px coral solid;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: 0 3px 0 0 rgb(196, 99, 64);
+    color: coral;
+    font-weight: bold; 
+}
+
+.btn-circle:active, .btn-cirlce.active {
+    box-shadow: none;
+    width: 95px;
+    height: 95px;
+}
