@@ -1,3 +1,8 @@
 h1 {
     font-family: 'Leckerli One', cursive;
 }
+.bottom-align {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }

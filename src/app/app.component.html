@@ -21,18 +21,68 @@
 <!--HEADER-->
 <app-header></app-header>
 
+<!-- Sidebar 
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a href="#">Start Bootstrap</a>
+      </li>
+      <li>
+        <a href="#">Dashboard</a>
+      </li>
+      <li>
+        <a href="#">Shortcuts</a>
+        </li>
+        <li>
+          <a href="#">Overview</a>
+        </li>
+        <li>
+          <a href="#">Events</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Services</a>
+        </li>
+        <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    -->
+      
 <!--BODY-->
-<div class="text-center my-4">
-  <h2>Food Trucks near Temple University</h2>
-</div>
-
-<div class="container">
+<div class="container-fluid mx-3">
+  
+  <div class="text-center my-4">
+    <h2>Food Trucks near Temple University</h2>
+  </div>
+  
   <div class="row">
-    <div class="col-12">
-      <app-card></app-card>
+    <div class="col-6">
+      <!-- app-card is card that holds the truck menu. add another tag and see what happens.. -->
+      <app-card></app-card>  
+    </div>
+    <div class="col-4">
+      <!--
+
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+        </div>
+      </div>
+    -->
     </div>
   </div>
-
+  
   <div class="fixed-bottom mb-5 row text-center ">
     <div class="col">
       <button class="btn-circle">Home</button>
@@ -41,7 +91,8 @@
       <button class="btn-circle">Search</button>
     </div>
   </div>
+
 </div>
 
-  <!--FOOTER-->
+<!--FOOTER-->
 <footer></footer>

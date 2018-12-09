@@ -1,17 +1,49 @@
-<div class="card mealy-card">
-  <!-- a row with two columns... 1st column: image 2nd column: details,buttons-->
-  <div class="row no-gutters">
-    <div class="col-6">
+<div *ngFor="let truck of trucks | async">
+  
+  <div class="row card mealy-card">
+    <!-- a row with two columns... 1st column: image 2nd column: details,buttons-->
+    <div class="row no-gutters">
+      <div class="col-6">
       <img class="img-fluid" src="https://temple-news.com/wp-content/blogs.dir/1/files/2015/08/FoodTrucks_News_8.25_BriannaSpause_11.jpg" alt="Image of truck">
     </div>
     <div class="col-6 pl-3">
-        <h5 class="card-title">Burger Tank</h5> <!-- name -->
-        <p class="card-text">Description/Bio</p> <!-- desc -->
-        <p class="card-text">Address</p>  <!-- addr -->
-        <h5>Popular Item</h5> <!-- popItem -->
-        <p>.................</p>
-        <a href="#" class="btn btn-primary">View Menu</a>
-        <a href="#" class="btn btn-primary">Call</a>
+      <h5 class="card-title">{{truck.name}}</h5> <!-- {{truck.name}} -->
+      <p class="card-text"></p> <!-- desc -->
+      <p class="card-text"></p>  <!-- addr -->
+      <h5>Popular Item</h5> <!-- popItem -->
+      <p>.................</p>
+      <button type="button" class="btn btn-primary" (click)="openModal(template)">View Menu</button>
+      
+      <ng-template #template>
+        <div class="modal-header">
+          <h4 class="modal-title pull-left">Burger Tank's Menu</h4>
+          <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          </div>
+          <div class="modal-body">
+            {{truck.menu}}
+            <accordion>
+              <accordion-group heading="Sandwiches">
+                  This content is straight in the template.
+                </accordion-group>
+                <accordion-group heading="Sides">
+                  <p>Some content</p>
+                </accordion-group>
+                <accordion-group heading="Drinks">
+                  <p>Some content</p>
+                </accordion-group>
+                <accordion-group heading="Another group">
+                  <p>Some content</p>
+                </accordion-group>
+              </accordion>
+
+            </div>
+          </ng-template>
+
+          <a href="#" class="btn btn-primary">Call</a>
     </div>
   </div>
+</div>
+
 </div>
