@@ -4,28 +4,29 @@
     <!-- a row with two columns... 1st column: image 2nd column: details,buttons-->
     <div class="row no-gutters">
       <div class="col-6">
-      <img class="img-fluid" src="https://temple-news.com/wp-content/blogs.dir/1/files/2015/08/FoodTrucks_News_8.25_BriannaSpause_11.jpg" alt="Image of truck">
+      <img class="img-fluid" src={{truck.picture}}>
     </div>
     <div class="col-6 pl-3">
       <h5 class="card-title">{{truck.name}}</h5> <!-- {{truck.name}} -->
       <p class="card-text"></p> <!-- desc -->
-      <p class="card-text"></p>  <!-- addr -->
+      <p class="card-text">{{truck.address}}</p>  <!-- addr -->
       <h5>Popular Item</h5> <!-- popItem -->
       <p>.................</p>
       <button type="button" class="btn btn-primary" (click)="openModal(template)">View Menu</button>
       
       <ng-template #template>
         <div class="modal-header">
-          <h4 class="modal-title pull-left">Burger Tank's Menu</h4>
+          <h4 class="modal-title pull-left">{{truck.name}} Menu</h4>
           <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
             <span aria-hidden="true">&times;</span>
           </button>
           </div>
           <div class="modal-body">
-            {{truck.menu}}
+           <!--{{truck.menu}}--> 
             <accordion>
               <accordion-group heading="Sandwiches">
                   This content is straight in the template.
+                  {{menu.name}}
                 </accordion-group>
                 <accordion-group heading="Sides">
                   <p>Some content</p>

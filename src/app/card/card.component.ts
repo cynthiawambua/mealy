@@ -15,6 +15,7 @@ import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 export class CardComponent implements OnInit {
   modalRef: BsModalRef;
   trucks: Observable<any[]>;
+  menu: Observable<any[]>;
 
   constructor(private modalService: BsModalService, db: AngularFirestore){
     this.trucks = db.collection('trucks').valueChanges();
@@ -22,7 +23,18 @@ export class CardComponent implements OnInit {
     // view debugger console on browser and look at what's being logged below
     console.log(this.trucks); // observable
     this.trucks.subscribe(data => console.log(data)); // must subscribe observable to get data
+ 
+    /*method to access sub-collections
+    this.menu = db.collection('Menu').valueChanges();
+    console.log(this.menu); // observable
+    this.menu.subscribe(data => console.log(data)); // must subscribe observable to get data
+    */
+ 
+ 
   }
+
+ 
+
 
   openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template);
