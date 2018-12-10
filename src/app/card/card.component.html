@@ -1,5 +1,6 @@
 <div *ngFor="let truck of trucks | async">
-  
+    <!--<div *ngFor="let entree of entrees | async">-->
+        <li *ngFor="let entree of entrees | async" >
   <div class="row card mealy-card">
     <!-- a row with two columns... 1st column: image 2nd column: details,buttons-->
     <div class="row no-gutters">
@@ -11,7 +12,7 @@
       <p class="card-text"></p> <!-- desc -->
       <p class="card-text">{{truck.address}}</p>  <!-- addr -->
       <h5>Popular Item</h5> <!-- popItem -->
-      <p>.................</p>
+      <p>{{truck.popular}}</p>
       <button type="button" class="btn btn-primary" (click)="openModal(template)">View Menu</button>
       
       <ng-template #template>
@@ -21,15 +22,24 @@
             <span aria-hidden="true">&times;</span>
           </button>
           </div>
+          
           <div class="modal-body">
            <!--{{truck.menu}}--> 
+           
             <accordion>
-              <accordion-group heading="Sandwiches">
-                  This content is straight in the template.
-                  {{menu.name}}
+                
+              <accordion-group heading="Entrees">
+                  <p>
+                    {{entree.name}}
+                    {{entree.price}}
+                  </p>
                 </accordion-group>
+              
                 <accordion-group heading="Sides">
-                  <p>Some content</p>
+                   <!--<p>
+                      {{side.name}}
+                      {{side.price}}
+                    </p>--> 
                 </accordion-group>
                 <accordion-group heading="Drinks">
                   <p>Some content</p>
@@ -37,14 +47,17 @@
                 <accordion-group heading="Another group">
                   <p>Some content</p>
                 </accordion-group>
+            
               </accordion>
-
-            </div>
+            
+            
+          </div>
           </ng-template>
 
           <a href="#" class="btn btn-primary">Call</a>
     </div>
   </div>
 </div>
-
+<!--</div>-->
+</li>
 </div>
